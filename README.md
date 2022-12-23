@@ -1,4 +1,8 @@
 # Summary
+This project was developped with PHP language, applying the SOLID principle.
+Templates used was twig.
+API testings done using postman.
+
 In this project, Docker is used to create containers to help me develop my project
 My project contains
 * `docker-compose.yaml` file with a
