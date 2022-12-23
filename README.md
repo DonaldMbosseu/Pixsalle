@@ -1,7 +1,6 @@
 # Summary
-
-This is a base template to develop the assignment. It contains the following:
-
+In this project, Docker is used to create containers to help me develop my project
+My project contains
 * `docker-compose.yaml` file with a
     * php-fpm image
     * mysql-image
@@ -9,7 +8,7 @@ This is a base template to develop the assignment. It contains the following:
     * adminer image
 * `docker-entrypoint-initdb.d/schema.sql` so when you run `docker compose up` a database is created following such
   schema
-* The PHP code to start your application with
+* The PHP code to start my application with
     * `composer.json` file
     * `templates` folder
     * `src` folder
@@ -18,22 +17,19 @@ This is a base template to develop the assignment. It contains the following:
 * `.env` file
 * `cypress` folder
 
-## How to create and destroy the services
+## How to create and destroy my services
 
-Use `docker compose up` to create the services. Use `docker compose down` to destroy them.
+I Use `docker compose up` to create the services. And use `docker compose down` to destroy them.
 
 
 ## How to run tests
-
-You may have noticed that the `docker-compose.yaml` file does not specify any cypress service. That is because you are
-going to use a separate container to run `cypress`. Every time you want to run a test suite / spec (you will find them
-inside `cypress/integration`) you will need to execute a command such as:
+To run tests, you can run:
 
 ```
 docker run --env CYPRESS_baseUrl=http://nginx:80 -v "${PWD}:/cypress" -w /cypress --network="pixsalle-template_default" -it --rm vcaballerosalle/cypress-mysql:1.0 /cypress --browser chrome --spec "cypress/integration/sign-in.spec.js"
 ```
 
-You need to notice two things in this command:
+Important notes:
 
 * First, you have to specify the spec at the end of the command. `cypress/integration/sign-in.spec.js` is the spec run
   by the previous command. If you remove the `--spec` flag and the corresponding argument, cypress will run all specs
