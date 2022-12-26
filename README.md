@@ -1,4 +1,4 @@
-# Summary
+# :book: Summary
 This project was developped with PHP language, applying the SOLID principle.
 Templates used was twig.
 API testings done using postman.
@@ -21,19 +21,19 @@ My project contains
 * `.env` file
 * `cypress` folder
 
-## How to create and destroy my services
+# :computer: How to create and destroy my services
 
 I Use `docker compose up` to create the services. And use `docker compose down` to destroy them.
 
 
-## How to run tests
+# :book: How to run tests
 To run tests, you can run:
 
 ```
 docker run --env CYPRESS_baseUrl=http://nginx:80 -v "${PWD}:/cypress" -w /cypress --network="pixsalle-template_default" -it --rm vcaballerosalle/cypress-mysql:1.0 /cypress --browser chrome --spec "cypress/integration/sign-in.spec.js"
 ```
 
-Important notes:
+# :notebook: Important notes:
 
 * First, you have to specify the spec at the end of the command. `cypress/integration/sign-in.spec.js` is the spec run
   by the previous command. If you remove the `--spec` flag and the corresponding argument, cypress will run all specs
