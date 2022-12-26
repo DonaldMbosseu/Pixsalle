@@ -25,8 +25,6 @@ My project contains
 
 I Use `docker compose up` to create the services. And use `docker compose down` to destroy them.
 
-
-# :book: How to run tests
 To run tests, you can run:
 
 ```
